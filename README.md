@@ -1,1 +1,0 @@
-# pauta-tdd
