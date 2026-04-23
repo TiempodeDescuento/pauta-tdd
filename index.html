@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TDD | Panel de Producción</title>
+  <title>TDD | Panel de Producción — Jue 23 Abr 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -12,32 +12,26 @@
 <body>
   <div class="bg-overlay"></div>
 
-  <!-- GANCHO FIJO — Siempre visible arriba -->
+  <!-- GANCHO FIJO -->
   <div class="hook-bar" id="hookBar">
     <span class="hook-bar-icon">🪝</span>
     <span class="hook-bar-label">GANCHO ACTIVO</span>
-    <span class="hook-bar-text" id="hookBarText">Inicia un bloque para ver el gancho al aire</span>
+    <span class="hook-bar-text" id="hookBarText">Navega entre bloques para ver el gancho al aire</span>
   </div>
 
   <div class="app">
 
-    <!-- ═══════════════════ TOPBAR ═══════════════════ -->
+    <!-- TOPBAR -->
     <header class="topbar">
       <div class="topbar-left">
-        <div class="live-pill">
-          <span class="live-dot"></span>
-          EN VIVO
-        </div>
+        <div class="live-pill"><span class="live-dot"></span>EN VIVO</div>
         <div class="program-meta">
-          <p class="eyebrow">Panel de Producción — TDD</p>
-          <h1 id="programSubtitle">Programa Regular</h1>
-          <h2 id="programTitle">Universitario vs Deportivo Garcilaso</h2>
+          <p class="eyebrow">Panel de Producción — Tiempo de Descuento</p>
+          <h1 id="programSubtitle">Programa Regular · Jueves 23 Abr 2026 · 9:30 PM · YouTube</h1>
+          <h2 id="programTitle">¿VOLVIÓ EL TRICAMPEÓN?</h2>
         </div>
       </div>
-
       <div class="topbar-right">
-
-        <!-- Cronómetro global -->
         <div class="timer-card">
           <span class="timer-label">⏱ TIEMPO DE TRANSMISIÓN</span>
           <div id="live-timer" class="timer-display">00:00:00</div>
@@ -47,45 +41,49 @@
             <button id="resetBtn" class="btn btn-dark" type="button">Reiniciar</button>
           </div>
         </div>
-
-        <!-- Cronómetro regresivo por bloque -->
         <div class="timer-card block-countdown-card">
           <span class="timer-label">⏳ TIEMPO DE BLOQUE</span>
           <div id="block-timer" class="timer-display block-timer-display">00:00</div>
-          <div class="block-progress-bar">
-            <div id="blockProgress" class="block-progress-fill"></div>
-          </div>
+          <div class="block-progress-bar"><div id="blockProgress" class="block-progress-fill"></div></div>
           <div class="timer-actions">
             <button id="startBlockBtn" class="btn btn-accent" type="button">▶ Bloque</button>
             <button id="pauseBlockBtn" class="btn btn-dark" type="button">Pausar</button>
             <button id="resetBlockBtn" class="btn btn-dark" type="button">Reset</button>
           </div>
         </div>
-
       </div>
     </header>
 
-    <!-- ═══════════════════ SUMMARY GRID ═══════════════════ -->
+    <!-- NOTA DE PRODUCCIÓN -->
+    <section class="production-note">
+      <div class="production-note-head">
+        <span class="pnote-icon">📋</span>
+        <strong>NOTA DE PRODUCCIÓN — MESA DE 3 · SIN DIEGO ESTA NOCHE</strong>
+      </div>
+      <p>Diego no está esta noche. Mesa reducida de 3. <strong>Bryan toma más protagonismo como voz periodística</strong> — debe traer el dato, no solo el choque. <strong>Fernando debe abrir temas</strong> y no solo acompañar — esta noche eleva el volumen y explota en los momentos clave. <strong>Johan tiene más espacio para el análisis táctico</strong> — aprovechar sus momentos álgidos cuando le tocan a Alianza. Ritmo más ágil, transiciones más cortas. 4 bloques en 90 min.</p>
+    </section>
+
+    <!-- SUMMARY GRID -->
     <section class="summary-grid">
       <article class="summary-card">
-        <span class="card-label">Tema central</span>
-        <h3>¿La U ya es campeón tras la caída de Cristal?</h3>
-        <p>Análisis de cómo la derrota celeste en Piura cambia la presión para el Coco Araujo.</p>
+        <span class="card-label">🔥 Tema Central</span>
+        <h3>¿Los jugadores de la U le hicieron "la camita" a Rabanal?</h3>
+        <p>La U goleó 4-1 con Araujo interino. El vestuario que no publicó ni un post de despedida.</p>
       </article>
       <article class="summary-card">
-        <span class="card-label">Tema secundario</span>
-        <h3>El factor Pablo Guede en Alianza Lima</h3>
-        <p>Impacto de su llegada y cómo mueve el tablero del Clausura.</p>
+        <span class="card-label">💣 Tema Bomba</span>
+        <h3>¿Barco bloquea el regreso de Fossati a la U?</h3>
+        <p>Gustavo Peralta confirma en L1 MAX: Fossati descartado. La pelea de egos que le cuesta un DT al tricampeón.</p>
       </article>
       <article class="summary-card">
-        <span class="card-label">Menciones express</span>
-        <h3>Erick Noriega (Lisboa), Santamaría y el "Puma" Carranza</h3>
-        <p>Última hora del mercado y dardos cruzados en la prensa local.</p>
+        <span class="card-label">📊 Express + Tabla</span>
+        <h3>Los Chankas HOY · Cristal en crisis · Puma vs Guerrero</h3>
+        <p>Tabla actualizada. Los Chankas vs Cienciano HOY 3 PM. Goleada 4-1 celeste y la guerra de leyendas viral.</p>
       </article>
     </section>
 
-    <!-- ═══════════════════ PANELISTAS ═══════════════════ -->
-    <section class="panelists-bar">
+    <!-- PANELISTAS — SOLO 3 ESTA NOCHE -->
+    <section class="panelists-bar panelists-bar--three">
 
       <div class="panelist-card" id="panel-bryan" data-panelist="bryan">
         <div class="panelist-top">
@@ -94,23 +92,11 @@
             <strong>Bryan Silva</strong>
             <span class="panelist-role role-moderator">Moderador</span>
           </div>
-          <button class="panelist-mic" data-id="bryan" title="Está hablando">🎙️</button>
+          <button class="panelist-mic" data-id="bryan">🎙️</button>
         </div>
-        <div class="panelist-tag tag-crema">🏆 Crema · Eufórico · Rupturista</div>
-        <textarea class="panelist-notes" placeholder="Anotar argumento de Bryan..."></textarea>
-      </div>
-
-      <div class="panelist-card" id="panel-diego" data-panelist="diego">
-        <div class="panelist-top">
-          <div class="panelist-avatar av-crema">DF</div>
-          <div class="panelist-info">
-            <strong>Diego Fernandez</strong>
-            <span class="panelist-role role-journalist">Periodista</span>
-          </div>
-          <button class="panelist-mic" data-id="diego" title="Está hablando">🎙️</button>
-        </div>
-        <div class="panelist-tag tag-crema">🏆 Crema · Analítico · Frío</div>
-        <textarea class="panelist-notes" placeholder="Anotar argumento de Diego..."></textarea>
+        <div class="panelist-tag tag-crema">🏆 Crema · Provocador · Va al choque</div>
+        <div class="panelist-brief">Esta noche trae el dato además del choque. Pide la cabeza de Barco en cámara. Enciende y no deja que nadie se quede callado.</div>
+        <textarea class="panelist-notes" placeholder="Anotaciones de Bryan..."></textarea>
       </div>
 
       <div class="panelist-card" id="panel-fernando" data-panelist="fernando">
@@ -120,10 +106,11 @@
             <strong>Fernando Valencia</strong>
             <span class="panelist-role role-fan">Hincha</span>
           </div>
-          <button class="panelist-mic" data-id="fernando" title="Está hablando">🎙️</button>
+          <button class="panelist-mic" data-id="fernando">🎙️</button>
         </div>
-        <div class="panelist-tag tag-crema">🏆 Crema · Corazón · Creyente</div>
-        <textarea class="panelist-notes" placeholder="Anotar argumento de Fernando..."></textarea>
+        <div class="panelist-tag tag-crema">🏆 Crema · Abre temas · Eleva el debate</div>
+        <div class="panelist-brief">Esta noche no solo acompaña. Abre temas, explota en los momentos clave y mete la pregunta que nadie quiere responder.</div>
+        <textarea class="panelist-notes" placeholder="Anotaciones de Fernando..."></textarea>
       </div>
 
       <div class="panelist-card" id="panel-johan" data-panelist="johan">
@@ -133,21 +120,20 @@
             <strong>Johan Carranza</strong>
             <span class="panelist-role role-tactical">Táctico</span>
           </div>
-          <button class="panelist-mic" data-id="johan" title="Está hablando">🎙️</button>
+          <button class="panelist-mic" data-id="johan">🎙️</button>
         </div>
-        <div class="panelist-tag tag-alianza">⭐ Alianza · Táctico · Neutral</div>
-        <textarea class="panelist-notes" placeholder="Anotar argumento de Johan..."></textarea>
+        <div class="panelist-tag tag-alianza">⭐ Alianza · Analítico · Frío</div>
+        <div class="panelist-brief">Más espacio esta noche. Diferencia entre sabotaje y desgano. Defiende a Los Chankas con datos. Se alza cuando le tocan a Alianza.</div>
+        <textarea class="panelist-notes" placeholder="Anotaciones de Johan..."></textarea>
       </div>
 
     </section>
 
-    <!-- ═══════════════════ MAIN LAYOUT ═══════════════════ -->
+    <!-- MAIN LAYOUT -->
     <main class="layout">
 
-      <!-- ─── SIDEBAR ─── -->
+      <!-- SIDEBAR -->
       <aside class="sidebar">
-
-        <!-- Clip Log -->
         <section class="panel-card clip-card">
           <div class="panel-head">
             <h3>Log de clips</h3>
@@ -157,33 +143,30 @@
           <div class="clip-controls">
             <button id="markClipBtn" class="btn btn-primary btn-full" type="button">🎬 Marcar momento</button>
           </div>
-          <textarea id="clipLog" placeholder="[00:00:00] Clip: descripción del momento..."></textarea>
+          <textarea id="clipLog" placeholder="[00:00:00] Clip: descripción..."></textarea>
           <div class="stack-actions">
             <button id="copyLogBtn" class="btn btn-outline btn-full" type="button">Copiar log</button>
             <button id="clearLogBtn" class="btn btn-outline btn-full" type="button">Limpiar log</button>
           </div>
         </section>
 
-        <!-- Flash Noticias con input en vivo -->
         <section class="panel-card news-card">
           <div class="panel-head">
             <h3>Flash noticias</h3>
             <span class="panel-badge">Última hora</span>
           </div>
-
           <div class="news-add-form">
             <input type="text" id="newsTitleInput" class="news-input" placeholder="📰 Titular..." />
             <input type="text" id="newsHookInput" class="news-input" placeholder="🪝 Gancho..." />
             <button id="addNewsBtn" class="btn btn-primary btn-full" type="button">+ Agregar noticia</button>
           </div>
-
           <div class="news-list" id="newsList">
 
-            <article class="news-item">
-              <span class="news-dot"></span>
+            <article class="news-item news-item--urgent">
+              <span class="news-dot news-dot--urgent"></span>
               <div class="news-content">
-                <strong>Erick Noriega:</strong> Lisboa negocia con Gremio.
-                <p class="hook">"¿Se va la joya sin dejar ni un gol de despedida?"</p>
+                <strong>🔴 HOY 3PM — Los Chankas vs Cienciano:</strong> Si ganan llegan a 29 pts y son líderes únicos del Apertura. Únicos invictos del torneo.
+                <p class="hook">"¿El único invicto juega en otra liga?"</p>
               </div>
               <button class="news-remove" type="button">✕</button>
             </article>
@@ -191,8 +174,8 @@
             <article class="news-item">
               <span class="news-dot"></span>
               <div class="news-content">
-                <strong>Pablo Guede:</strong> Ya está en Lima para firmar.
-                <p class="hook">"¿Viene a campeonar o a cobrar el finiquito?"</p>
+                <strong>Cristal 1-4 Atlético Grau:</strong> Goleada en Sullana (Mié 22). Vizeu: "Faltó corazón, somos Sporting Cristal." Cristal a 12 puntos del líder.
+                <p class="hook">"¿Ya dijeron adiós al Apertura?"</p>
               </div>
               <button class="news-remove" type="button">✕</button>
             </article>
@@ -200,27 +183,43 @@
             <article class="news-item">
               <span class="news-dot"></span>
               <div class="news-content">
-                <strong>Sporting Cristal:</strong> Crisis tras el 1-0 ante Grau.
-                <p class="hook">"¡Tienen frío en Piura y miedo en Lima!"</p>
+                <strong>Puma Carranza vs Paolo Guerrero:</strong> Guerrero: "Estamos hasta las hue***" al escuchar que el Puma es ídolo crema. El Puma: "Mi carrera siempre fue limpia. Le di 8 títulos a la U."
+                <p class="hook">"El clásico que no termina nunca."</p>
+              </div>
+              <button class="news-remove" type="button">✕</button>
+            </article>
+
+            <article class="news-item">
+              <span class="news-dot"></span>
+              <div class="news-content">
+                <strong>Alianza 8-0 Cusco FC:</strong> Goleada histórica en Matute (fecha 11). Guerrero anotó. DG +16. Guede consolida el liderato.
+                <p class="hook">"¿Guede lo tiene o es espejismo?"</p>
+              </div>
+              <button class="news-remove" type="button">✕</button>
+            </article>
+
+            <article class="news-item">
+              <span class="news-dot"></span>
+              <div class="news-content">
+                <strong>Bustos descartado:</strong> Asistente Adinolfi a TV Perú: "Imposible. No vamos a salir de Millonarios, recién llegamos." Cláusula de $500K.
+                <p class="hook">"La U busca DT y todos le cierran la puerta."</p>
               </div>
               <button class="news-remove" type="button">✕</button>
             </article>
 
           </div>
         </section>
-
       </aside>
 
-      <!-- ─── CONTENT AREA ─── -->
+      <!-- CONTENT AREA -->
       <section class="content-area">
-
         <div class="section-head">
           <div>
             <p class="eyebrow">Escaleta</p>
-            <h3>Pauta del programa — <span id="totalDuration">90 MINUTOS</span></h3>
+            <h3>Pauta — <span id="totalDuration">90 MIN · MESA DE 3</span></h3>
           </div>
           <div class="section-head-right">
-            <div class="duration-chip" id="programDate">Miércoles 22 Abr, 2026</div>
+            <div class="duration-chip" id="programDate">Jueves 23 Abr, 2026</div>
             <div class="block-nav">
               <button id="prevBlockBtn" class="btn btn-dark" type="button">← Ant.</button>
               <span id="blockCounter" class="block-counter">Bloque 1 / 4</span>
@@ -231,83 +230,223 @@
 
         <div class="blocks" id="blocksContainer">
 
-          <!-- BLOQUE 1 -->
-          <article class="block current" data-block="0" data-duration="1200">
+          <!-- ═══ BLOQUE 1 ═══ -->
+          <article class="block current" data-block="0" data-duration="1320">
             <div class="block-time">00'</div>
             <div class="block-body">
               <div class="block-top">
-                <h4>Bloque 1 — La U y el "Efecto Coco Araujo"</h4>
+                <h4>Bloque 1 — ¿Los jugadores de la U le hicieron "la camita" a Rabanal?</h4>
                 <span class="status-pill current-status">Al aire</span>
               </div>
-              <p class="block-duration">15 – 20 minutos</p>
-              <p class="block-text">Debate sobre la salida de Rabanal y si Araujo es el hombre indicado para aprovechar el tropiezo de Cristal.</p>
-              <div class="block-roles">
-                <p><strong>Bryan 🔥:</strong> "Poner a Araujo es de equipo chico que no tiene presupuesto; si no ganan hoy, la crisis es total".</p>
-                <p><strong>Diego 🧊:</strong> "¡A la U no se viene a experimentar, Araujo conoce el ADN y eso vale más que 20 pizarras de Rabanal!"</p>
-                <p><strong>Fernando ❤️:</strong> "Pensemos en el club, Araujo es un bombero que siempre cumple, denle el beneficio de la duda".</p>
-                <p><strong>Johan 📐:</strong> "¿ADN? Lo que necesitan es orden. Araujo en tres días no va a arreglar el desastre táctico que dejaron".</p>
+              <p class="block-duration">22 minutos · TEMA CENTRAL · Debate viral de la semana</p>
+
+              <div class="block-context">
+                <div class="context-head">📰 CONTEXTO Y DATOS DUROS</div>
+                <p>La U goleó 4-1 a Deportivo Garcilaso el Miércoles 22 con Araujo interino. <strong>Goles:</strong> Valera (min 23 cabezazo + min 65 penal), Caín Fara (28), José Rivera (84). Gol de Garcilaso: Christopher Olivares (71). <strong>El ambiente en Campo Mar tras la salida de Rabanal fue de alivio, no de tristeza.</strong> Rabanal se fue sin despedirse del plantel. Ningún jugador publicó un post de agradecimiento en redes sociales. Gustavo Peralta reveló en L1 MAX que en el primer entrenamiento con Araujo el ambiente fue <em>"distendido, como si se hubiera levantado un peso."</em></p>
+                <p><strong>La frase que lo hundió (fuente: El Comercio):</strong> Tras la derrota ante Coquimbo en Copa Libertadores, Rabanal dijo en conferencia de prensa: <em>"Son futbolistas profesionales y no se les está pidiendo tampoco que construyan un cohete para ir a la luna."</em> Esa declaración rompió la relación con el plantel. En Campo Mar se cargó el ambiente con la sensación de que "nos tenemos que ir todos." Los jugadores lo sintieron como un desmerito público y en ese momento la fractura quedó expuesta (El Comercio, 21 Abr).</p>
+                <p><strong>Historial Rabanal (12 partidos oficiales):</strong> 5V · 4E · 3D · 13 GF / 11 GC. Tenía contrato hasta fines de 2027. La directiva resolvió el tema económico y lo desvinculó el 21 de abril. Eddie Fleischman en Juego Cruzado: <em>"El estilo de Rabanal fragilizó al jugador y provocó rechazo en el vestuario."</em></p>
               </div>
-              <p class="block-hook" data-hook="¿La camiseta gana partidos u hoy se acaba el cuento?">🪝 "¿La camiseta gana partidos u hoy se acaba el cuento?"</p>
+
+              <div class="block-social">
+                <div class="social-head">🐦 X (TWITTER) / REDES — LO QUE SE DICE ESTA SEMANA</div>
+                <ul class="social-list">
+                  <li><strong>Trending en X Perú:</strong> #LaCamitaARabanal — miles de tuits cuestionando la actitud del plantel crema.</li>
+                  <li><strong>Reimond Manco (declaración de marzo):</strong> "La camita no existe, pero hay desgano e incomodidad. Es verdad."</li>
+                  <li><strong>Fleischman en X:</strong> "El jugador peruano no tolera que le digan las cosas directas. Eso es un problema cultural grave."</li>
+                  <li><strong>Hinchas divididos:</strong> Un sector culpa al plantel; otro culpa a Rabanal por el "comentario del cohete a la luna."</li>
+                  <li><strong>Post viralizado:</strong> Comparación Fossati vs Rabanal — Fossati se fue a cenar con el plantel; Rabanal ni se despidió.</li>
+                </ul>
+              </div>
+
+              <div class="block-roles">
+                <p><strong>Bryan 🔥 (provoca y trae el dato):</strong> "¿Camita o verdad? Si el técnico hace declaraciones públicas despreciando a sus jugadores, la reacción del plantel es lógica. Los jugadores no son robots." Debe provocar a Johan: <em>"En Alianza también pasa esto, Johan, no me digas que no."</em></p>
+                <p><strong>Johan 📐 (analiza sin conspiración):</strong> El problema no fue "la camita" — fue la desconexión táctica. Rabanal intentó replicar un estilo europeo en un plantel que no tenía ese ADN. Eso crea desconfianza, no conspiración. Johan diferencia entre sabotaje y desgano. El 8-0 de Alianza demuestra que cuando DT y plantel hablan el mismo idioma, los resultados se dan.</p>
+                <p><strong>Fernando ❤️ (amplifica con nombre concreto):</strong> "¿Quién lidera el vestuario crema hoy? ¿Edison Flores? ¿Valera? ¿Concha? Si hay líderes fuertes en el plantel, <em>ellos</em> son los responsables de la desconexión con Rabanal, no todos. Pongan nombres."</p>
+              </div>
+
+              <div class="block-questions">
+                <div class="questions-head">❓ PREGUNTAS GENERADORAS</div>
+                <ol class="questions-list">
+                  <li><strong>Bryan abre:</strong> ¿Es "la camita" o es simplemente que Rabanal nunca conectó con el plantel peruano?</li>
+                  <li><strong>Johan:</strong> ¿Puede un técnico europeo dirigir en el fútbol peruano sin adaptar su lenguaje y su metodología?</li>
+                  <li><strong>Fernando cierra:</strong> ¿Cuántos DTs más tiene que quemar la U antes de entender que el problema es estructural?</li>
+                </ol>
+              </div>
+
+              <p class="block-hook" data-hook="¿Le hicieron la camita o Rabanal se la hizo solo con el 'cohete a la luna'?">🪝 <em>"¿Le hicieron la camita o Rabanal se la hizo solo con el 'cohete a la luna'?"</em></p>
             </div>
           </article>
 
-          <!-- BLOQUE 2 -->
-          <article class="block" data-block="1" data-duration="1500">
-            <div class="block-time">20'</div>
+          <!-- ═══ BLOQUE 2 ═══ -->
+          <article class="block" data-block="1" data-duration="1200">
+            <div class="block-time">22'</div>
             <div class="block-body">
               <div class="block-top">
-                <h4>Bloque 2 — El Fracaso de Cristal en Piura</h4>
+                <h4>Bloque 2 — ¿Barco bloquea el regreso de Fossati a la U?</h4>
                 <span class="status-pill">Siguiente</span>
               </div>
-              <p class="block-duration">20 – 25 minutos</p>
-              <p class="block-text">Análisis de la derrota celeste ante Grau. ¿Se les escapó el Apertura en un partido de visita?</p>
-              <div class="block-roles">
-                <p><strong>Bryan 🔥:</strong> "Lo de Zé Ricardo es vergonzoso. Le regaló el campeonato a la U en un partido de solteros contra casados".</p>
-                <p><strong>Diego 🧊:</strong> "Cristal volvió a ser Cristal: cuando las papas queman y el calor aprieta, se derriten".</p>
-                <p><strong>Fernando ❤️:</strong> "Es una mala tarde, pero siguen ahí. No celebren antes de tiempo que el fútbol da vueltas".</p>
-                <p><strong>Johan 📐:</strong> "Critican a Cristal pero Alianza y la U tampoco son el City. Ganó el que mejor planteó, punto".</p>
+              <p class="block-duration">20 minutos · TEMA BOMBA · Clip garantizado</p>
+
+              <div class="block-context">
+                <div class="context-head">📰 REVELACIÓN DEL DÍA — Gustavo Peralta en L1 MAX</div>
+                <p><strong>Peralta confirmó en L1 MAX y en Colectivo World:</strong> <em>"Jorge Fossati no va a volver a Universitario. Es una decisión tomada. En este momento, no."</em> La razón: la relación entre Fossati y Álvaro Barco <em>"terminó muy mal"</em>. Fuentes del entorno del Nonno señalan que Fossati valoraría volver al club, pero no ve posibilidad de trabajar bajo la estructura actual donde Barco es Director Deportivo.</p>
+                <p><strong>La historia detrás de la pelea:</strong> A fines del 2025, tras lograr el tricampeonato, Fossati exigió mejoras contractuales + control sobre los fichajes del plantel. Barco se negó: <em>"Le hicimos un contrato de campeón, no hay por qué mejorarlo."</em> Fossati se fue sin cena de despedida con la directiva. Solo hubo comida con los jugadores. Ahora la U busca DT urgente y la hinchada pide al Nonno — pero Barco es el obstáculo.</p>
+                <p><strong>Estado actual de las opciones (fuentes: Depor, Infobae, Líbero):</strong> Fabián Bustos descartado — Millonarios exige cláusula de $500K y el propio asistente Adinolfi cerró la puerta ("Imposible, recién llegamos"). Ricardo Gareca tiene contrato vigente hasta después del Mundial 2026, no puede asumir. Gustavo Álvarez (ex U. de Chile) suena como opción lejana. <strong>Franco Velazco, y no Barco, tomará la decisión final del DT</strong> (Depor, 22 Abr). El objetivo: DT en funciones para la primera semana de mayo. Copa Libertadores vs Nacional (Uruguay) el 29 de abril — la dirige Araujo interino.</p>
               </div>
-              <p class="block-hook" data-hook="Cuidado, que si la U no gana hoy, el papelón será histórico">🪝 "Cuidado, que si la U no gana hoy, el papelón será histórico".</p>
+
+              <div class="block-social">
+                <div class="social-head">🐦 X (TWITTER) / REDES — LA HINCHADA CREMA ESTALLA</div>
+                <ul class="social-list">
+                  <li><strong>Trending:</strong> #FueraBarcoPara y #FuerzaFossati — hinchas piden que Barco deje ir al Nonno.</li>
+                  <li><strong>Mauro Cantoro en Denganche:</strong> "¿Por qué no le dan el equipo al Coco Araujo? Acá se bajan al peruano. Traen extranjeros carísimos y al local lo subestiman."</li>
+                  <li><strong>Meme viral:</strong> Foto de Fossati levantando el tricampeonato vs foto de Gassama sin goles — pie de foto: "Elecciones de Barco."</li>
+                  <li><strong>Sector que defiende a Barco:</strong> "Fossati era imposible de manejar, pedía todo y no aceptaba nada."</li>
+                  <li><strong>La pregunta que domina foros:</strong> ¿La U pelea el tetra con Araujo interino o se queda sin DT hasta mayo?</li>
+                </ul>
+              </div>
+
+              <div class="block-roles">
+                <p><strong>Bryan 🔥 (va al cuello de Barco):</strong> "¿Qué hace Barco como Director Deportivo si su ego personal le impide traer al DT que la hinchada quiere y que demostró ganar campeonatos? Gassama, Rabanal — todas son decisiones de Barco. Todas fallaron." <em>Bryan tiene que pedir la salida de Barco en cámara. Ese es el clip.</em></p>
+                <p><strong>Johan 📐 (postura institucional):</strong> Un DT que exige control total sobre el plantel es un riesgo para cualquier club. Barco puede tener razón en no ceder ese poder. El problema no es Barco vs Fossati — es que la U no tiene una estructura clara de quién decide qué. En Alianza, Guede llegó con ese conflicto resuelto desde el día uno.</p>
+                <p><strong>Fernando ❤️ (explota con la pregunta sin escape):</strong> "¿Qué DT concreto trae Barco si bloquea a Fossati? ¿Bustos? Acaba de llegar a Millonarios. ¿El Coco Araujo para siempre? Barco no puede ser el problema y encima no tener la solución."</p>
+              </div>
+
+              <div class="block-questions">
+                <div class="questions-head">❓ PREGUNTAS GENERADORAS</div>
+                <ol class="questions-list">
+                  <li><strong>Bryan abre fuerte:</strong> ¿Debe Barco renunciar a la Dirección Deportiva si su relación personal con Fossati le impide tomar la mejor decisión para el club?</li>
+                  <li><strong>Johan equilibra:</strong> ¿Es Fossati la solución real o la hinchada lo idealiza porque lo que viene después da miedo?</li>
+                  <li><strong>Fernando explota — sin escape:</strong> Nómbralo: ¿quién es el DT concreto que la U PUEDE y DEBE traer ahora mismo?</li>
+                </ol>
+              </div>
+
+              <p class="block-hook" data-hook="Barco le ganó a Fossati el argumento — pero le está perdiendo la temporada a la hinchada.">🪝 <em>"Barco le ganó a Fossati el argumento — pero le está perdiendo la temporada a la hinchada."</em></p>
             </div>
           </article>
 
-          <!-- BLOQUE 3 -->
-          <article class="block" data-block="2" data-duration="1200">
-            <div class="block-time">45'</div>
+          <!-- ═══ BLOQUE 3 ═══ -->
+          <article class="block" data-block="2" data-duration="720">
+            <div class="block-time">42'</div>
             <div class="block-body">
               <div class="block-top">
-                <h4>Bloque 3 — Guede, Noriega y el Humo del Mercado</h4>
+                <h4>Bloque 3 — Liga 1: Tabla actualizada, Los Chankas HOY y el derrumbe de Cristal</h4>
                 <span class="status-pill">En espera</span>
               </div>
-              <p class="block-duration">15 – 20 minutos</p>
-              <p class="block-text">La llegada de Guede a Alianza Lima y la posible venta de Noriega al Sporting de Lisboa.</p>
-              <div class="block-roles">
-                <p><strong>Bryan 🔥:</strong> "Si Noriega se quiere ir, que se vaya. En el fútbol peruano sobran los que se creen cracks antes de ganar nada".</p>
-                <p><strong>Diego 🧊:</strong> "Alianza trae nombres para tapar que no tienen fútbol. Es puro humo para la prensa".</p>
-                <p><strong>Fernando ❤️:</strong> "Es un técnico de jerarquía. Con Guede, Alianza se mete a la pelea por el Clausura fijo".</p>
-                <p><strong>Johan 📐:</strong> "Guede es un estratega top. En Matute van a aprender lo que es táctica de verdad, tomen nota".</p>
+              <p class="block-duration">12 minutos · ANÁLISIS · Datos y posiciones</p>
+
+              <div class="block-context">
+                <div class="context-head">📊 TABLA TORNEO APERTURA — Actualizada al Mié 22 Abr (antes del partido de hoy)</div>
+                <div class="tabla-grid">
+                  <div class="tabla-row tabla-row--leader">
+                    <span class="tabla-pos">1°</span><span class="tabla-team">Alianza Lima</span>
+                    <span class="tabla-pts">26 pts</span><span class="tabla-extra">DG +16 · 11 PJ</span>
+                  </div>
+                  <div class="tabla-row tabla-row--leader">
+                    <span class="tabla-pos">1°</span><span class="tabla-team">Los Chankas</span>
+                    <span class="tabla-pts">26 pts ★</span><span class="tabla-extra">Partido HOY · 10 PJ</span>
+                  </div>
+                  <div class="tabla-row">
+                    <span class="tabla-pos">3°</span><span class="tabla-team">Cienciano</span>
+                    <span class="tabla-pts">19 pts</span><span class="tabla-extra">Copa Sudamericana</span>
+                  </div>
+                  <div class="tabla-row tabla-row--crema">
+                    <span class="tabla-pos">4°</span><span class="tabla-team">Universitario</span>
+                    <span class="tabla-pts">21 pts</span><span class="tabla-extra">–5 del líder</span>
+                  </div>
+                  <div class="tabla-row">
+                    <span class="tabla-pos">5°</span><span class="tabla-team">Melgar</span>
+                    <span class="tabla-pts">17 pts</span><span class="tabla-extra">–</span>
+                  </div>
+                  <div class="tabla-row tabla-row--crisis">
+                    <span class="tabla-pos">6°</span><span class="tabla-team">Sporting Cristal</span>
+                    <span class="tabla-pts">14 pts</span><span class="tabla-extra">–12 del líder</span>
+                  </div>
+                </div>
+                <p class="tabla-note">★ Si Los Chankas ganan HOY vs Cienciano (3 PM · Estadio Los Chankas · Andahuaylas) llegan a <strong>29 puntos</strong> y son líderes únicos con 3 de ventaja sobre Alianza. <strong>Son el único equipo invicto del torneo.</strong></p>
               </div>
-              <p class="block-hook" data-hook="¡En Matute celebran contratos, en el Monumental celebramos garra!">🪝 "¡En Matute celebran contratos, en el Monumental celebramos garra!"</p>
+
+              <div class="block-context" style="margin-top:10px;">
+                <div class="context-head">🔴 CRISIS CRISTAL — Goleada 4-1 en Sullana (Mié 22 Abr · Fecha 10)</div>
+                <p><strong>Goles de Atlético Grau:</strong> Ataupillco (34), Ruidíaz (52), Delgadillo (67 — validado por VAR), Camargo (90+4). <strong>Gol de Cristal:</strong> Vizeu (57, ingresó desde el banco). Ruidíaz, que había fallado un penal insólito vs Los Chankas la fecha anterior, se redimió con un golazo. Felipe Vizeu recriminó a sus compañeros a pie del campo en L1 MAX: <em>"Tenemos que poner un poco más de corazón, pelear un poco más. Hoy día faltó. Somos Sporting Cristal, hay que respetar la camiseta que vestimos."</em> El Comercio analizó: <strong>tres partidos en 7 días</strong> (visita a Palmeiras + vuelta a Lima + Piura a 38°C) destruyeron las piernas del plantel. Cristal acumula 3 derrotas en sus últimos 4 partidos y está a 12 puntos de los líderes. El club prioriza Copa Libertadores: el miércoles recibe a Junior de Barranquilla (Fecha 3 del Grupo F).</p>
+              </div>
+
+              <div class="block-roles">
+                <p><strong>Bryan & Fernando 🔥:</strong> Los Chankas son "líderes de la altura, no del fútbol." Juegan en Andahuaylas a 2,900 metros — nadie de Lima puede ir a jugar ahí en condiciones normales. Bryan: "Son líderes porque nadie puede respirar allá arriba, no por fútbol."</p>
+                <p><strong>Johan 📐 (defiende con datos — incomoda a los cremas):</strong> Único equipo invicto. Mejor promedio goleador entre los equipos de provincia. Sólidos en defensa. No son un accidente — son el equipo mejor organizado del torneo. "Si Alianza y la U tuvieran esa solidez defensiva, no estaríamos discutiendo esto."</p>
+              </div>
+
+              <div class="block-questions">
+                <div class="questions-head">❓ PREGUNTA GENERADORA</div>
+                <ol class="questions-list">
+                  <li>Si Los Chankas terminan campeones del Apertura, ¿qué mensaje le manda eso a Alianza y a la U sobre cómo se construye un equipo ganador?</li>
+                </ol>
+              </div>
+
+              <p class="block-hook" data-hook="¿Los Chankas son el milagro de la altura o el espejo que le muestra a todos lo que hacen mal?">🪝 <em>"¿Los Chankas son el milagro de la altura o el espejo que le muestra a todos lo que hacen mal?"</em></p>
             </div>
           </article>
 
-          <!-- BLOQUE 4 -->
-          <article class="block" data-block="3" data-duration="1500">
-            <div class="block-time">65'</div>
+          <!-- ═══ BLOQUE 4 ═══ -->
+          <article class="block" data-block="3" data-duration="600">
+            <div class="block-time">54'</div>
             <div class="block-body">
               <div class="block-top">
-                <h4>Bloque 4 — Pronósticos y Cierre Explosivo</h4>
+                <h4>Bloque 4 — Express: Puma vs Guerrero + Alianza 8-0 + Predicciones · Cierre</h4>
                 <span class="status-pill">Cierre</span>
               </div>
-              <p class="block-duration">25 minutos</p>
-              <p class="block-text">Conclusiones finales sobre el partido contra Garcilaso y el futuro de la tabla de posiciones.</p>
-              <div class="block-roles">
-                <p><strong>Bryan 🔥:</strong> "Si Araujo no saca los 3 puntos, que se regrese a menores hoy mismo. Basta de experimentos".</p>
-                <p><strong>Diego 🧊:</strong> "La U gana hoy y el domingo ya estamos probándonos la corona. No hay quien nos pare".</p>
-                <p><strong>Fernando ❤️:</strong> "Humildad ante todo. Garcilaso es duro, pero confío en el equipo y en la garra".</p>
-                <p><strong>Johan 📐:</strong> "Garcilaso les va a dar una lección. Sigan creyéndose campeones antes de jugar, sigan".</p>
+              <p class="block-duration">10 min express + predicciones + cierre explosivo</p>
+
+              <div class="block-context">
+                <div class="context-head">⚡ MENCIONES EXPRESS — Máx. 3 minutos en total · Ritmo rápido</div>
+                <ul class="express-list">
+                  <li>
+                    <strong>🥊 Puma Carranza vs Paolo Guerrero (fuente: Depor, La República, Trome):</strong>
+                    En el programa de YouTube MVP (Guerrero + Aldo Miyashiro), Guerrero reaccionó al escuchar que el Puma era ídolo crema de Miyashiro: <em>"Estamos hasta las hue***"</em> — se levantó del set en gesto de irse. El clip se viralizó. El Puma respondió en La Interna: <em>"Siempre la soberbia, la arrogancia. Yo siempre he dicho que el único ídolo es Lolo Fernández. Yo solo he sido un referente. Mi carrera siempre fue limpia. La U que me dio un colchón, yo le di 8 títulos. Mi club me ama — no tengo que ponerme siempre un número de camiseta para que me quieran."</em> Carranza ganó 8 títulos nacionales con Universitario (1985, 1987, 1990, 1992, 1993, 1998, 1999, 2000) — es el jugador con más galardones en la historia del club.
+                    <p class="hook">"Guerrero le falta el respeto a 8 títulos — y los 8 títulos le responden solos."</p>
+                  </li>
+                  <li>
+                    <strong>💪 Alianza Lima 8-0 Cusco FC (fuente: Infobae, TV Perú):</strong>
+                    Goleada histórica en Matute (fecha 11). Guerrero anotó. DG +16. El equipo de Guede tiene 7 partidos por disputar en el Apertura, 4 en Matute. Próximo: Atlético Grau en Piura (Dom 26 Abr 15:30). El fixture restante incluye el clásico vs Sporting Cristal el 9 de mayo en Matute.
+                    <p class="hook">"Guede silencia críticas con la goleada del año — pero Piura espera."</p>
+                  </li>
+                  <li>
+                    <strong>🇵🇪 Perú vs España (8 Jun · Estadio Cuauhtémoc):</strong>
+                    La FPF confirmó amistoso oficial. Jean Ferrari participó en la presentación. La selección trabaja con Mano Menezes rumbo a Eliminatorias.
+                    <p class="hook">"¿Amistoso de lujo o ensayo para el técnico que nos lleve al Mundial?"</p>
+                  </li>
+                </ul>
               </div>
-              <p class="block-hook" data-hook="¡Mañana el titular es uno solo: O se escapa la U o se incendia todo!">🪝 "¡Mañana el titular es uno solo: O se escapa la U o se incendia todo!"</p>
+
+              <div class="block-context" style="margin-top:10px;">
+                <div class="context-head">🎯 PREDICCIONES — SIN FILTRO · MESA DE 3 → MÁS ARRIESGADAS</div>
+                <div class="predictions-grid">
+                  <div class="prediction-card">
+                    <div class="pred-avatar av-crema">BS</div>
+                    <div class="pred-name">Bryan</div>
+                    <div class="pred-question">¿Álvaro Barco sigue como Director Deportivo al final de la temporada 2026?</div>
+                    <div class="pred-note">Bryan se moja. Respuesta de clip garantizado.</div>
+                  </div>
+                  <div class="prediction-card">
+                    <div class="pred-avatar av-alianza">JC</div>
+                    <div class="pred-name">Johan</div>
+                    <div class="pred-question">¿Cuántos puntos suman Los Chankas en sus próximas 3 fechas? Da el número exacto + argumento táctico.</div>
+                    <div class="pred-note">Johan no especula. Número exacto.</div>
+                  </div>
+                  <div class="prediction-card">
+                    <div class="pred-avatar av-crema">FV</div>
+                    <div class="pred-name">Fernando</div>
+                    <div class="pred-question">Nómbralo: ¿quién es el próximo DT de la U? Un nombre concreto, sin rodeos. El que nadie quiere escuchar.</div>
+                    <div class="pred-note">El nombre que nadie dice. Esta noche lo dice.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-context" style="margin-top:10px; border-left-color: var(--yellow);">
+                <div class="context-head" style="color:var(--yellow);">🎬 CIERRE SUGERIDO — GANCHO PARA EL DOMINGO</div>
+                <p><strong>Bryan cierra atacando a Barco.</strong> Fernando pone el nombre del DT. <strong>Johan cierra frío:</strong> <em>"Alianza sigue líder, la U sigue sin DT, y los hinchas cremas siguen soñando con Fossati."</em> Esa imagen — Johan sonriendo tranquilo, Bryan y Fernando protestando — es el gancho para el domingo. No cortar esa imagen. Dejar que respire.</p>
+              </div>
+
+              <p class="block-hook" data-hook="Alianza líder, la U sin DT, los Chankas invictos. ¿Qué le queda al fútbol peruano por sorprendernos?">🪝 <em>"Alianza líder, la U sin DT, los Chankas invictos. ¿Qué le queda al fútbol peruano por sorprendernos?"</em></p>
             </div>
           </article>
 
@@ -316,9 +455,7 @@
     </main>
   </div>
 
-  <!-- Toast de notificaciones -->
   <div id="toast" class="toast"></div>
-
   <script src="assets/js/script.js"></script>
 </body>
 </html>
